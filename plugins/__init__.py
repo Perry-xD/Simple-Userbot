@@ -1,8 +1,14 @@
 from telethon.sessions import StringSession
 from telethon import TelegramClient as tg
-from config import *
+
 from . import *
 
 CMD_HELP = {}
 
-simple = tg(StringSession(config.SIMPLE_SESSION), api_id=config.API_ID, api_hash=config.API_HASH)
+import os
+
+API_ID = os.environ['API_ID']
+API_HASH = os.environ['API_HASH']
+SIMPLE_SESSION = os.environ['SIMPLE_SESSION']
+
+simple = tg(StringSession(SIMPLE_SESSION), api_id=API_ID, api_hash=API_HASH)
