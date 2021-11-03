@@ -1,4 +1,5 @@
 from . import *
+from plugins import CMD_HELP
 from telethon import events, client
 
 
