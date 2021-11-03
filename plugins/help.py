@@ -4,7 +4,7 @@ from telethon import sync
 import io, os
 import config
 from .alive import CMD_HELP
-from bot import simple, simpleBot
+from bot import simple
 from . import *
 
 
@@ -17,7 +17,7 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("`Unknown module type !help to see all modules`")
+            await event.edit("`Unknown module type !halp to see all modules`")
     else:
         await event.edit(" Support Group for help & report bugs @simple_userbot ")
         string = (f"`Use !halp <module_name>`\n\n**Currently Loaded [{len(CMD_HELP)}] Modules **\n")
