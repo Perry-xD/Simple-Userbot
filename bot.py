@@ -45,17 +45,6 @@ def Simple(**args):
     return decorator
 
 
-for x in glob.glob("plugins/*.py"):
-    name = Path(open(x).name).stem.replace(".py", "")
-    spec = importlib.util.spec_from_file_location(
-        "plugins.{}".format(name), Path("plugins/{}.py".format(name))
-    )
-    mod = importlib.util.module_from_spec(spec)
-    mod.simple = simple
-    mod.simpleBot = simpleBot
-    spec.loader.exec_module(mod)
-    sys.modules["plugins." + name] = mod
-    print("Imported " + name.capitalize())
 
 
 
