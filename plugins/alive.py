@@ -1,7 +1,8 @@
 from . import *
+from telethon import events
 
 
-@Simple(pattern="alive")
+@simple.on(events.NewMessage(outgoing=True, pattern=".alive"))
 async def alive_me(event):
   await event.edit(f"**Aha Meh Alive {simple.get_me(first_name)} Sir!**")
 
