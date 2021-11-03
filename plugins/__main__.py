@@ -11,6 +11,6 @@ from plugins import simple
 
 
 
-if __name__==__main__:
+if __name__=="__main__":
     simple.start()
     simple.run_until_disconnected()
