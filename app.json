@@ -29,7 +29,7 @@
             "description": "CHAT_ID int of log chat",
             "required": false,
             "value": "-100",
-        },
+        }
     },
     "keywords": [
         "telegram",
