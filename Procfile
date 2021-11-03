@@ -1,1 +1,1 @@
-web: bash Simple.sh
+worker: python3 bot.py
