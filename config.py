@@ -1,8 +1,8 @@
 import os
 
-API_ID = int(os.environ.get("API_ID", 0)
-API_HASH = os.environ.get("API_HASH", None)
-BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
-SIMPLE_SESSION = os.environ.get("SIMPLE_SESSION", None)
-LOGGER_ID = int(os.environ.get("LOGGER_ID", 0))
+API_ID = os.environ['API_ID']
+API_HASH = os.environ['API_HASH']
+BOT_TOKEN = os.environ['BOT_TOKEN']
+BOT_USERNAME = os.environ['BOT_USERNAME']
+SIMPLE_SESSION = os.environ['SIMPLE_SESSION']
+LOGGER_ID = os.environ['LOGGER_ID']
