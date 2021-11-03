@@ -51,8 +51,8 @@ for x in glob.glob("plugins/*.py"):
         "plugins.{}".format(name), Path("plugins/{}.py".format(name))
     )
     mod = importlib.util.module_from_spec(spec)
-    mod.uxb = uxb
-    mod.bot = bot
+    mod.simple = simple
+    mod.simpleBot = simpleBot
     spec.loader.exec_module(mod)
     sys.modules["plugins." + name] = mod
     print("Imported " + name.capitalize())
