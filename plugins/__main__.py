@@ -1,30 +1,11 @@
 import plugins.alive, plugins.help
-import config
+from . import *
 import asyncio
-import logging
-
-from telethon import TelegramClient as tg
-from telethon.sessions import StringSession
-import glob
-import importlib
 import sys
-from pathlib import Path
+
 
 from telethon import events
 from plugins import simple
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
