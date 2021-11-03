@@ -50,7 +50,8 @@ def Simple(**args):
 
 
 
-
-simple.run_until_disconnected()
-simpleBot.run_until_disconnected()
+loop = asyncio.get_event_loop()
+simple.start()
+simpleBot.start()
+loop.run_forever()
 print("DONE!")
