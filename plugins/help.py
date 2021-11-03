@@ -3,6 +3,7 @@ from telethon import events, client
 from telethon import sync
 import io, os
 import config
+from .alive import CMD_HELP
 from bot import simple, simpleBot
 from . import *
 
