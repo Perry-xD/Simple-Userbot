@@ -1,10 +1,10 @@
 from . import *
-from telethon import events
+from telethon import events, client
 
 
-@simple.on(events.NewMessage(outgoing=True, pattern=".alive"))
+@events.register(events.NewMessage(outgoing=True , pattern=r'\!jinda'))
 async def alive_me(event):
-  await event.edit(f"**Aha Meh Alive {simple.get_me(first_name)} Sir!**")
+  await event.edit(f"**Aha Meh Alive {client.get_me(first_name)} Sir!**")
 
 
 CMD_HELP.update({"alive": "alive your userbot"})
