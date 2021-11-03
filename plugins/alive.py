@@ -1,7 +1,7 @@
 from . import *
 
 from telethon import events, client
-from important import CMD_HELP
+from .important import CMD_HELP
 
 @events.register(events.NewMessage(outgoing=True , pattern=r'\!jinda'))
 async def alive_me(event):
