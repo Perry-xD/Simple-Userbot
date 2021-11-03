@@ -5,30 +5,30 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token. Get one from @BotFather duh",
-            "value": "",
+            "value": ""
         },
         "BOT_USERNAME": {
             "description": "Your bot username with @",
-            "value": "",
+            "value": ""
         },
         "API_ID": {
             "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
-            "value": "",
+            "value": ""
         },
         "API_HASH": {
             "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
             "required": true,
-            "value": "",
+            "value": ""
         },
         "SIMPLE_SESSION": {
             "description": "Telegram Telethon STRING SESSION",
             "required": true,
-            "value": "",
+            "value": ""
         },
         "LOGGER_ID": {
             "description": "CHAT_ID int of log chat",
             "required": false,
-            "value": "-100",
+            "value": "-100"
         }
     },
     "keywords": [
