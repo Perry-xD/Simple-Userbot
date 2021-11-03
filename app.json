@@ -19,18 +19,6 @@
             "description": "You api hash, from my.telegram.org.",
             "value": ""
         },
-        "BOT_TOKEN": {
-            "description": "Your Bot Token",
-            "value": ""
-        },
-        "BOT_USERNAME": {
-            "description": "Your Bot Username",
-            "value": ""
-        },
-        "LOGGER_ID": {
-            "description": "Your Group Id",
-            "value": ""
-        },
         "SIMPLE_SESSION": {
             "description": "A secret key for verifying the integrity of signed cookies.",
             "value": "secret"
