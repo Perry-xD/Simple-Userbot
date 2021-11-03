@@ -1,5 +1,5 @@
 from telethon.tl.custom import Button 
-from telethon import events
+from telethon import events, client
 from telethon import sync
 import io, os
 import config
@@ -8,7 +8,7 @@ from . import *
 
 @simpleBot.on(events.InlineQuery)
 async def inline_handler(event):
-  me = await simple.get_me()  
+  me = await client.get_me()  
   builder = event.builder
   query = event.text
   split = query.split(' ', 1) 
@@ -47,7 +47,7 @@ async def inline_handler(event):
 @simpleBot.on(events.CallbackQuery)
 async def handler(event):
   try:
-    me = await simple.get_me()
+    me = await client.get_me()
     if not event.query.user_id == me.id:
         return await event.answer("**Sorry, You dont have permission to  Access me!**", alert=True)
     et = event.data.decode("UTF-8")
@@ -88,11 +88,11 @@ async def handler(event):
   except Exception as e:     
 
 
-@simple.on(events.NewMessage(outgoing=True, pattern=".help"))
+@events.register(events.NewMessage(outgoing=True , pattern=r'\.halp'))
 async def ban(event):
     if not config.BOT_TOKEN:
        return await event.edit ("** Error Add bot token as BOT_TOKEN in heroku var or set inline mode on **")
-    mbt = await simpleBot.get_me()
+    mbt = await sampleBot.get_me()
     try:
        results = await event.client.inline_query(mbt.username, "helpme" )
     except:
