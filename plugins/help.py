@@ -88,7 +88,7 @@ async def handler(event):
   except Exception as e:     
 
 
-@Simple(pattern="help")
+@simple.on(events.NewMessage(outgoing=True, pattern=".help"))
 async def ban(event):
     if not config.BOT_TOKEN:
        return await event.edit ("** Error Add bot token as BOT_TOKEN in heroku var or set inline mode on **")
