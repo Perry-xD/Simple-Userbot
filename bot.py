@@ -1,4 +1,4 @@
-from plugins import *
+import plugins.alive, plugins.help
 import config
 import asyncio
 import logging
@@ -19,7 +19,6 @@ logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 
 simple = tg(StringSession(str(config.SIMPLE_SESSION)), api_id=config.API_ID, api_hash=config.API_HASH)
-simpleBot = tg("bot", api_id=config.API_ID, api_hash=config.API_HASH).start(bot_token=config.BOT_TOKEN)
 
 
 
@@ -27,22 +26,6 @@ simpleBot = tg("bot", api_id=config.API_ID, api_hash=config.API_HASH).start(bot_
 
 
 
-CMD_HANDLER = "."
-
-
-def Simple(**args):
-    args["pattern"] = "^{}".format(CMD_HANDLER) + args["pattern"]
-
-    def decorator(func):
-        async def wrapper(c):
-            try:
-                await func(c)
-            except:
-                return
-
-        simple.add_event_handler(wrapper, events.NewMessage(**args))
-
-    return decorator
 
 
 
@@ -50,8 +33,8 @@ def Simple(**args):
 
 
 
-loop = asyncio.get_event_loop()
+
+
 simple.start()
-simpleBot.start()
-loop.run_forever()
-print("DONE!")
+simple.run_until_disconnected()
+
