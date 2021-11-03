@@ -1,39 +1,46 @@
 {
-    "name": "Simple Userbot",
-    "description": "A Telethon based Telegram Userbot.",
-    "buildpacks": [{"url": "heroku/python"}],
-    "env": {
+    "name": "Simple UserBot",
+    "description":"This UserBot does only few things but Does it best",
+    "keywords":[
+        "Simple",
+        "Userbot",
+        "Telethon"
+    ],
+    "repository":"https://github.com/Perry-xD",
+    "logo":"#TODO",
+    "success_url":"https://t.me/Simple_Userbot",
+    "stack": "container",
+    "env":{
+        "API_ID": {
+            "description": "You api id, from my.telegram.org.",
+            "value": ""
+        },
+        "API_HASH":{
+            "description": "You api hash, from my.telegram.org.",
+            "value": ""
+        },
         "BOT_TOKEN": {
-            "description": "Your bot token. Get one from @BotFather duh",
+            "description": "Your Bot Token",
             "value": ""
         },
         "BOT_USERNAME": {
-            "description": "Your bot username with @",
-            "value": ""
-        },
-        "API_ID": {
-            "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
-            "value": ""
-        },
-        "API_HASH": {
-            "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
-            "required": true,
-            "value": ""
-        },
-        "SIMPLE_SESSION": {
-            "description": "Telegram Telethon STRING SESSION",
-            "required": true,
+            "description": "Your Bot Username",
             "value": ""
         },
         "LOGGER_ID": {
-            "description": "CHAT_ID int of log chat",
-            "required": false,
-            "value": "-100"
+            "description": "Your Group Id",
+            "value": ""
+        },
+        "SIMPLE_SESSION": {
+            "description": "A secret key for verifying the integrity of signed cookies.",
+            "value": "secret"
         }
     },
-    "keywords": [
-        "telegram",
-        "Telethon",
-        "Simple Userbot",
-    ],
+    "formation":{
+        "simpleuserbot":{
+            "quantity":1,
+            "size":"free"
+        }
+    }
+
 }
