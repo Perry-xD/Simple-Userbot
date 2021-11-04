@@ -6,7 +6,7 @@
         "Userbot",
         "Telethon"
     ],
-    "repository":"https://github.com/Perry-xD",
+    "repository":"https://github.com/Perry-xD/Simple-Userbot",
     "logo":"#TODO",
     "success_url":"https://t.me/Simple_Userbot",
     "stack": "container",
