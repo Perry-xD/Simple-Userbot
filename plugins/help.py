@@ -4,7 +4,7 @@ from telethon import sync
 import io, os
 import config
 from .important import CMD_HELP
-from . import *
+from plugins import *
 
 
 
