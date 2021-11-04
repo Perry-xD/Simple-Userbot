@@ -1,7 +1,6 @@
 from telethon.sessions import StringSession
 from telethon import TelegramClient as tg
 
-from . import *
 
 CMD_HELP = {}
 
