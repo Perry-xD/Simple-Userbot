@@ -1,34 +1,34 @@
-{
-    "name": "Simple UserBot",
-    "description":"This UserBot does only few things but Does it best",
-    "keywords":[
-        "Simple",
-        "Userbot",
-        "Telethon"
-    ],
-    "repository":"https://github.com/Perry-xD/Simple-Userbot",
-    "logo":"#TODO",
-    "success_url":"https://t.me/Simple_Userbot",
-    "stack": "container",
-    "env":{
-        "API_ID": {
-            "description": "You api id, from my.telegram.org.",
-            "value": ""
-        },
-        "API_HASH":{
-            "description": "You api hash, from my.telegram.org.",
-            "value": ""
-        },
-        "SIMPLE_SESSION": {
-            "description": "A secret key for verifying the integrity of signed cookies.",
-            "value": "secret"
-        }
+{                
+  "name": "Simple-UserBot",
+  "description": "The best userbot made by Tilak Sharma",  
+  "logo": "",
+    "keywords": [
+    "telegram",
+    "userbot",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/perry-xd/simple-userbot/",
+  "website": "https://github.com/perry-xd/simple-userbot/",
+  "success_url": "#TODO",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from my.telegram.org! Putting Others Value may result In Account Ban.",
+      "value": ""
     },
-    "formation":{
-        "simpleuserbot":{
-            "quantity":1,
-            "size":"free"
-        }
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Putting Others Value May result In Account Ban.",
+      "value": ""
+    },
+    "SIMPLE_SESSION": {
+      "description": "Your telegram telethon string session ",
+      "value": ""
     }
-
+  },
+  "buildpacks": [
+      {
+          "url": "heroku/python"
+      }
+  ]
 }
