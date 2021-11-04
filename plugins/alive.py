@@ -1,4 +1,4 @@
-from . import *
+from plugins import *
 
 from telethon import events, client
 from .important import CMD_HELP
